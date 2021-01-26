@@ -1,3 +1,8 @@
+# ssh commands to connect to netcup
+ssh-netcup@() {
+  ssh hosting153068@$@
+}
+
 # shortcut to execute homebrew with the arm snippet
 arm() {
   arch -x86_64 $@
