@@ -1,3 +1,8 @@
+# start/stop mongodb service
+mongo-@(){
+  brew services $@ mongodb-community@4.4
+}
+
 # ssh commands to connect to netcup
 ssh-netcup@() {
   ssh hosting153068@$@
