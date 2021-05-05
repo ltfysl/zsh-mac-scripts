@@ -1,10 +1,15 @@
+# build windows go program
+go-windows(){
+  env GOOS=windows GOARCH=amd64 go build $@
+}
+
 # start/stop mongodb service
-mongo-@(){
+mongo-service(){
   brew services $@ mongodb-community@4.4
 }
 
 # ssh commands to connect to netcup
-ssh-netcup@() {
+ssh-netcup() {
   ssh hosting153068@$@
 }
 
@@ -15,7 +20,27 @@ arm() {
 
 # Open vscode-exploration with code shortcut instead of code-exploration
 code() {
-  code-exploration $@
+  code-insiders $@
+}
+
+# Shortcut for PHP Artisan command
+pa() {
+    php artisan $@
+}
+
+# Shortcut for NPM commands
+nrw() {
+    npm run dev
+}
+
+# Shortcut for NPM commands
+nrd() {
+    npm run dev
+}
+
+# Shortcut for NPM commands
+nrp() {
+    npm run prod
 }
 
 installedPhpVersions=($(brew ls --versions | ggrep -E 'php(@.*)?\s' | ggrep -oP '(?<=\s)\d\.\d' | uniq | sort))
