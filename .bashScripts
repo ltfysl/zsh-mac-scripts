@@ -30,7 +30,7 @@ pa() {
 
 # Shortcut for NPM commands
 nrw() {
-    npm run dev
+    npm run watch
 }
 
 # Shortcut for NPM commands
