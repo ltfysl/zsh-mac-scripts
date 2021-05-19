@@ -1,3 +1,8 @@
+#phpunit shortcut
+pu() {
+  vendor/bin/phpunit $@
+}
+
 # build windows go program
 go-windows(){
   env GOOS=windows GOARCH=amd64 go build $@
