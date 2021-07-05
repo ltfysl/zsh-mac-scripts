@@ -1,3 +1,8 @@
+# setup laravel projects fast
+laravel-setup() {
+  composer install && npm install && cp .env.example .env  && php artisan key:generate && php artisan migrate
+}
+
 #phpunit shortcut
 pu() {
   vendor/bin/phpunit $@
@@ -24,9 +29,9 @@ arm() {
 }
 
 # Open vscode-exploration with code shortcut instead of code-exploration
-code() {
-  code-insiders $@
-}
+#code() {
+#  code-insiders $@
+#}
 
 # Shortcut for PHP Artisan command
 pa() {
