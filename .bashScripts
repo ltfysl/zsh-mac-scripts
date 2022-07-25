@@ -8,6 +8,10 @@ pu() {
   vendor/bin/phpunit $@
 }
 
+pest() {
+    ./vendor/bin/pest $@
+}
+
 # build windows go program
 go-windows(){
   env GOOS=windows GOARCH=amd64 go build $@
